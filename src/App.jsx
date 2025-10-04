@@ -1,7 +1,7 @@
 import React from 'react';
 import Cart from './componenets/Cart';
-// commit
 function App() {
+  //yo
   return <Cart />;
 }
 
