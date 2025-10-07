@@ -14,6 +14,7 @@ int main(){
     for(int i = 0; i < a ; i++ ){
         cin>>vec[i];
     }
+    //
     cout<<"Elements at the even index: ";
     for(int i = 0; i < a  ; i++ ){
        if(i%2==0)
