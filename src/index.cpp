@@ -14,10 +14,18 @@ int main(){
     for(int i = 0; i < a ; i++ ){
         cin>>vec[i];
     }
-    for(int i = a/2; i < a ; i++ ){
-       sum += vec[i];
+    cout<<"Elements at the even index: ";
+    for(int i = 0; i < a  ; i++ ){
+       if(i%2==0)
+       cout<<vec[i]<<" ";
     }
-    cout<<sum;
+    cout<<endl;
+    cout<<"Elements at the odd index : ";
+     for(int i = 0; i < a  ; i++ ){
+       if(i%2!=0)
+       cout<<vec[i]<<" ";
+         
+     }
     //
     ///
     
