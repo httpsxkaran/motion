@@ -4,8 +4,9 @@ using namespace std;
 
 int main(){
     vector<int> vec;
-    int a;
-    int avg = 0, res = 1, sum = 0;
+    int a, res ;
+    int avg = 0, sum = 0;
+    int K=0;
     int small = INT8_MAX;
     int max = INT8_MIN;
     cout<<"Enter the number of inputs"<<endl;
@@ -14,20 +15,21 @@ int main(){
     for(int i = 0; i < a ; i++ ){
         cin>>vec[i];
     }
-    //
-    cout<<"Elements at the even index: ";
-    for(int i = 0; i < a  ; i++ ){
-       if(i%2==0)
-       cout<<vec[i]<<" ";
-    }
-    cout<<endl;
-    cout<<"Elements at the odd index : ";
-     for(int i = 0; i < a  ; i++ ){
-       if(i%2!=0)
-       cout<<vec[i]<<" ";
-         
-     }
-    //
-    ///
-    
+      for(int i = 0; i<a; i++){
+        for(int j = 0; j<a ; j++){
+            if(vec[i]==vec[j]){
+                K++;
+            }
+        }
+        if(K>1)
+        res = K;
+        if(res<small){
+           small = K;
+           max = vec[i];
+        }
+        K = 0;
+      }
+      if(small<2)
+      cout<<"-1";
+      else cout<<max;
 }
