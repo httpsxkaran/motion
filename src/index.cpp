@@ -4,33 +4,36 @@ using namespace std;
 
 int main(){
     vector<int> vec;
-    int a, res ;
+    int a, res = 0, res1 = 0, min = INT8_MAX ;
     int avg = 0, sum = 0;
-    int K=0;
+    int count = 0;
     int small = INT8_MAX;
     int max = INT8_MIN;
     cout<<"Enter the number of inputs"<<endl;
     cin>>a;
     vec.resize(a);
     for(int i = 0; i < a ; i++ ){
-        cin>>vec[i];
+        cin>>vec[i];///
     }
-    ////
-      for(int i = 0; i<a; i++){
-        for(int j = 0; j<a ; j++){
-            if(vec[i]==vec[j]){
-                K++;
-            }
+    for(int i = 0 ; i < a ; i++){
+        for(int j = 0 ; j< a ; j++){
+           if(vec[i]==vec[j])
+           count++;
         }
-        if(K>1)
-        res = K;
-        if(res<small){
-           small = K;
-           max = vec[i];
+        if(count>1){
+                 
+            res = count;
+           
         }
-        K = 0;
-      }
-      if(small<2)
-      cout<<"-1";
-      else cout<<max;
+         if(res < min && count>1){
+            min = count; 
+            res1 = vec[i];
+        }
+        
+        count=0;
+    }
+    if(res1==0)
+    cout<<"-1";
+    else cout<<res1;
+    
 }
