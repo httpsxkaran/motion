@@ -8,7 +8,7 @@ int main(){
     int avg = 0, sum = 0;
     int count = 0;
     int small = INT8_MAX;
-    int max = INT8_MIN;
+    int b,max = INT8_MIN;
     cout<<"Enter the number of inputs"<<endl;
     cin>>a;
     vec.resize(a);
