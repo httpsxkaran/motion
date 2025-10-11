@@ -12,7 +12,8 @@ int main(){
     cout<<"Enter the number of inputs"<<endl;
     cin>>a;
     vec.resize(a);
-    for(int i = 0; i < a ; i++ ){
+    
+    for(int i = 0; i < a ; i++ ){///
         cin>>vec[i];///
     }
     for(int i = 0 ; i < a ; i++){
