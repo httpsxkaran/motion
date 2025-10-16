@@ -30,11 +30,9 @@ int main(){
               cout<<endl;
         }
     }
-   ////
+
 
 
    } 
 
- 
-   
 }
