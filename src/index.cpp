@@ -30,7 +30,8 @@ int main(){
               cout<<endl;
         }
     }
-    
+   
+      
 
    } 
 
